@@ -18,6 +18,8 @@ use Xaj\ErgoBundle\Entity\User;
 
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpFoundation\Response;
+
 
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 

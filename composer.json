@@ -27,7 +27,8 @@
         "hautelook/templated-uri-bundle": "~2.0",
         "willdurand/rest-extra-bundle": "~1.0",
         "lexik/jwt-authentication-bundle": "1.0.5",
-        "liip/imagine-bundle": "1.1.1"
+        "liip/imagine-bundle": "1.1.1",
+        "nelmio/cors-bundle": "~1.0"
     },
     "conflict": {
         "symfony/routing": "2.4.1"

@@ -25,7 +25,8 @@ class AppKernel extends Kernel
             new Bazinga\Bundle\RestExtraBundle\BazingaRestExtraBundle(),
             new Xaj\ErgoBundle\XajErgoBundle(),
             new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
-            new Liip\ImagineBundle\LiipImagineBundle()
+            new Liip\ImagineBundle\LiipImagineBundle(),
+            new Nelmio\CorsBundle\NelmioCorsBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

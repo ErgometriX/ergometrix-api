@@ -3,8 +3,8 @@ parameters:
     database_host: 127.0.0.1
     database_port: '3306'
     database_name: ergometrix
-    database_user: root
-    database_password: root
+    database_user: ergo
+    database_password: ergo
     mailer_transport: smtp
     mailer_auth_mode: login
     mailer_host: 'smtp.polytechniman.fr'

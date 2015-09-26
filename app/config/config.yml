@@ -104,3 +104,10 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [120, 90], mode: outbound }
+nelmio_cors:
+    paths:
+      '^/api':
+          allow_origin: ['*']
+          allow_headers: ['x-requested-with']
+          allow_methods: ['POST', 'PUT', 'GET', 'DELETE', 'OPTIONS']
+          max_age: 3600
