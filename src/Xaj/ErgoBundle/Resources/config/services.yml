@@ -1,0 +1,7 @@
+parameters:
+#    xaj_ergo.example.class: Xaj\ErgoBundle\Example
+
+services:
+#    xaj_ergo.example:
+#        class: %xaj_ergo.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

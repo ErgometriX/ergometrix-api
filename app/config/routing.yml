@@ -1,0 +1,31 @@
+# app/config/routing.yml
+
+xaj_ergo:
+    type: rest
+    resource: Xaj\ErgoBundle\Controller\ErgoController
+
+xaj_user:
+    type: rest
+    resource: Xaj\ErgoBundle\Controller\UserController
+
+xaj_rank:
+    type: rest
+    resource: Xaj\ErgoBundle\Controller\RankController
+
+xaj_auth:
+    type: rest
+    resource: Xaj\ErgoBundle\Controller\AuthController
+
+xaj_gallery:
+    type: rest
+    resource: Xaj\ErgoBundle\Controller\GalleryController
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+xaj_ergo_static:
+    resource: "@XajErgoBundle/Resources/config/routing.yml"
+
+NelmioApiDocBundle:
+  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+  prefix:   /api/doc

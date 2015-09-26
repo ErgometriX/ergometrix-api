@@ -1,0 +1,3 @@
+xaj_ergo_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: XajErgoBundle:Default:index }

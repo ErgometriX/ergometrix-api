@@ -1,0 +1,191 @@
+<?php
+
+namespace Xaj\ErgoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Xaj\ErgoBundle\Entity\Boat;
+use Xaj\ErgoBundle\Entity\Rower;
+
+/**
+ * Leader
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Xaj\ErgoBundle\Entity\LeaderRepository")
+ */
+class Leader
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="phone", type="integer")
+     */
+    private $phone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="club", type="string", length=255, nullable=true)
+     */
+    private $club;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Xaj\ErgoBundle\Entity\Rower", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $rower;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Xaj\ErgoBundle\Entity\Boat")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $boat;
+
+
+    public function __construct(Boat $boat, Rower $rower)
+    {
+        $this->setBoat($boat);
+        $this->setRower($rower);
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Leader
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param integer $phone
+     * @return Leader
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return integer 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set club
+     *
+     * @param string $club
+     * @return Leader
+     */
+    public function setClub($club)
+    {
+        $this->club = $club;
+
+        return $this;
+    }
+
+    /**
+     * Get club
+     *
+     * @return string 
+     */
+    public function getClub()
+    {
+        return $this->club;
+    }
+
+    /**
+     * Set rower
+     *
+     * @param \Xaj\ErgoBundle\Entity\Rower $rower
+     * @return Leader
+     */
+    public function setRower(\Xaj\ErgoBundle\Entity\Rower $rower)
+    {
+        $this->rower = $rower;
+
+        return $this;
+    }
+
+    /**
+     * Get rower
+     *
+     * @return \Xaj\ErgoBundle\Entity\Rower 
+     */
+    public function getRower()
+    {
+        return $this->rower;
+    }
+
+    /**
+     * Set boat
+     *
+     * @param \Xaj\ErgoBundle\Entity\Boat $boat
+     * @return Leader
+     */
+    public function setBoat(\Xaj\ErgoBundle\Entity\Boat $boat)
+    {
+        $this->boat = $boat;
+
+        return $this;
+    }
+
+    /**
+     * Get boat
+     *
+     * @return \Xaj\ErgoBundle\Entity\Boat 
+     */
+    public function getBoat()
+    {
+        return $this->boat;
+    }
+}

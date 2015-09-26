@@ -1,0 +1,16 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: '3306'
+    database_name: ergometrix
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_auth_mode: login
+    mailer_host: 'smtp.polytechniman.fr'
+    mailer_user: 'ergometrix@polytechniman.fr'
+    mailer_password: 'ergo#Xman13'
+    mailer_port: '587'
+    locale: fr
+    secret: 85ec8ed10dc3cbcc5bb57d69ec8f3c1051
+    database_path: null
