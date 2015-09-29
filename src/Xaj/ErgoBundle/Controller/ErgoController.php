@@ -32,7 +32,7 @@ class ErgoController extends FOSRestController
     public function checkInscriptionAction()
     {
         $now = new \DateTime();
-        $dernierDelai = new \DateTime("2014-12-08 23:59:59");
+        $dernierDelai = new \DateTime("2015-12-08 23:59:59");
         $res = $now <= $dernierDelai;
         $res = ($res == true) ? 1 : 0;
         return array('check' => $res);

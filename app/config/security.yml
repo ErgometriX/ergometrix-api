@@ -29,7 +29,7 @@ security:
                     enabled: true
                     name:    bearer
 
-    # access_control:
-    #     - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-    #     - { path: ^/admin,       roles: IS_AUTHENTICATED_FULLY }
-    #     - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
