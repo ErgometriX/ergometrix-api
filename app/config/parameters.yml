@@ -5,12 +5,12 @@ parameters:
     database_name: ergometrix
     database_user: ergo
     database_password: ergo
-    mailer_transport: smtp
-    mailer_auth_mode: login
-    mailer_host: 'smtp.polytechniman.fr'
-    mailer_user: 'ergometrix@polytechniman.fr'
-    mailer_password: 'ergo#Xman13'
-    mailer_port: '587'
+    mailer_transport: gmail
+    mailer_auth_mode: ~
+    mailer_host: ~
+    mailer_user: ergo
+    mailer_password: ergo
+    mailer_port: '465'
     locale: fr
     secret: 85ec8ed10dc3cbcc5bb57d69ec8f3c1051
     database_path: null

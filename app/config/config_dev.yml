@@ -26,4 +26,4 @@ assetic:
     use_controller: true
 
 swiftmailer:
-    disable_delivery: true
+    disable_delivery: false

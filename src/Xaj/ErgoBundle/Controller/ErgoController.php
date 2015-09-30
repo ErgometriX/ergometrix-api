@@ -461,7 +461,10 @@ class ErgoController extends FOSRestController
         $leader->setPhone($phone);
         $leader->setClub($club);
 
+        //$boat->setLeader($leader);
+
         $em->persist($leader);
+       // $em->persist($boat);
         $em->flush();
 
         return $leader;
@@ -506,16 +509,18 @@ class ErgoController extends FOSRestController
      */
     public function sendRecapMailAction(Boat $boat)
     {
+        
         $message = \Swift_Message::newInstance()
                 ->setSubject('Confirmation de votre inscription à ErgometriX 2014')
-                ->setFrom(array('ergometrix@polytechniman.fr' => 'ErgometriX 2014'))
-                ->setReplyTo(array('ergometrix2014@gmail.com' => 'ErgometriX 2014'))
+                ->setFrom(array('kalaspa@gmail.com' => 'ErgometriX 2014'))
+                ->setReplyTo(array('kalaspa@gmail.com' => 'ErgometriX 2014'))
                 ->setTo($boat->getLeader()->getEmail())
                 ->setBody(
                     $this->renderView('XajErgoBundle:Boat:email.html.twig', array('boatName' => $boat->getName())), 'text/html')
                 ->addPart(
                     $this->renderView('XajErgoBundle:Boat:email-plaintext.html.twig', array('boatName' => $boat->getName())), 'text/plain')
                 ;
+
         return $this->get('mailer')->send($message);
     }
 
